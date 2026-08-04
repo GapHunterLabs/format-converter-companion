@@ -46,8 +46,12 @@ complaints:
 ### v1 scope cuts (documented, not silent)
 
 - YAML support covers block/flow mappings and sequences, plain/quoted
-  scalars, and comments -- not anchors, aliases, tags, or multi-document
-  streams.
+  scalars, comments, and block-level anchors/aliases (`&name`/`*name`,
+  always expanded to a deep copy -- JSON/XML have no way to represent
+  a shared reference) -- not tags, or flow-level anchors/aliases
+  (inside `{...}`/`[...]`). A second real `---` document boundary after
+  content is rejected with a clear error instead of silently merging
+  both documents into one tree.
 - XML has no single canonical JSON-shaped representation, so this plugin
   uses the same convention as most JSON&lt;-&gt;XML converters (xmltodict,
   Jackson XmlMapper): attributes become `@name` keys, direct text content
