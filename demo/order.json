@@ -1,0 +1,27 @@
+"orderId": "ACME-2026-004821"
+"customer":
+  "company": "Müller Industrieteile GmbH"
+  "contact": "Katharina Müller"
+  "email": "purchasing@mueller-industrieteile.de"
+  "address":
+    "street": "Bahnhofstraße 12"
+    "city": "München"
+    "postalCode": "80331"
+    "country": "Germany"
+"lineItems":
+  - "sku": "ACME-BRG-4402"
+    "description": "Precision bearing, 40mm bore"
+    "quantity": 250
+    "unitPriceEur": 18.75
+  - "sku": "ACME-SHF-1190"
+    "description": "Stainless steel drive shaft"
+    "quantity": 40
+    "unitPriceEur": 142.00
+  - "sku": "ACME-GSK-0087"
+    "description": "High-temperature gasket set"
+    "quantity": 500
+    "unitPriceEur": 3.20
+"currency": "EUR"
+"status": "confirmed"
+"requestedDeliveryDate": "2026-09-15"
+"notes": "Please split shipment: bearings and shafts to São Paulo warehouse, gaskets to München."
