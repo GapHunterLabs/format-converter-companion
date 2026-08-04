@@ -1,0 +1,39 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>dev.gaphunter.formatconvertercompanion</id>
+    <name>Format Converter Companion</name>
+    <vendor>Gap Hunter Labs</vendor>
+    <description><![CDATA[
+        <p>Converts JSON, YAML, and XML directly in the editor -- select
+        text (or convert the whole file) and pick a target format from the
+        editor popup menu. No file-path dialog, no "paste into a browser
+        tab" detour: a real paid competitor's reviewers asked for exactly
+        this ("I was expecting that I can convert editor content without
+        extra dialog that asks me to enter two file paths").</p>
+        <p>Parsing/serialization run off the EDT on a pooled thread, so
+        converting a large paste never freezes the IDE -- the other cited
+        complaint against that competitor. JSON and YAML are hand-rolled
+        parsers (no bundled Jackson/SnakeYAML dependency to avoid
+        classpath fragility); XML uses the JDK's own javax.xml DOM APIs,
+        hardened against XXE. Source format is detected from content, not
+        file extension, so pasted/untitled text with no extension still
+        detects correctly.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <group id="FormatConverterCompanion.ConvertGroup" text="Convert Format" popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <action id="FormatConverterCompanion.ConvertToJson"
+                    class="dev.gaphunter.formatconvertercompanion.actions.ConvertToJsonAction"
+                    text="Convert to JSON" description="Convert the selection (or whole file) to JSON"/>
+            <action id="FormatConverterCompanion.ConvertToYaml"
+                    class="dev.gaphunter.formatconvertercompanion.actions.ConvertToYamlAction"
+                    text="Convert to YAML" description="Convert the selection (or whole file) to YAML"/>
+            <action id="FormatConverterCompanion.ConvertToXml"
+                    class="dev.gaphunter.formatconvertercompanion.actions.ConvertToXmlAction"
+                    text="Convert to XML" description="Convert the selection (or whole file) to XML"/>
+        </group>
+    </actions>
+</idea-plugin>
