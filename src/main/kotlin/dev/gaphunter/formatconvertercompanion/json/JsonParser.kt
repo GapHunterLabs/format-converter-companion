@@ -8,8 +8,8 @@ import dev.gaphunter.formatconvertercompanion.model.FormatConversionException
  * regex backtracking, single pass over the input -- deliberately not a
  * dependency on a bundled Jackson/Gson class, since relying on an
  * IntelliJ Platform-internal library that isn't a declared plugin
- * dependency is exactly the kind of classpath fragility
- * AUTOMATION_PLAYBOOK.md/CONSTITUTION.md SS6 already steers away from
+ * dependency is exactly the kind of classpath fragility this catalog
+ * already steers away from
  * ("hand-roll over new dependency when the surface is small and
  * stable" -- same call already made for XlsxReader and
  * NginxDirectiveIndex in this workspace).
