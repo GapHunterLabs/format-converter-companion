@@ -36,4 +36,8 @@
                     text="Convert to XML" description="Convert the selection (or whole file) to XML"/>
         </group>
     </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Format Converter Companion" displayType="BALLOON"/>
+    </extensions>
 </idea-plugin>

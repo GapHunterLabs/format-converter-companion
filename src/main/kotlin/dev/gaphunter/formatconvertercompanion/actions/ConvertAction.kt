@@ -11,6 +11,7 @@ import com.intellij.openapi.ui.Messages
 import dev.gaphunter.formatconvertercompanion.ConversionService
 import dev.gaphunter.formatconvertercompanion.Format
 import dev.gaphunter.formatconvertercompanion.model.FormatConversionException
+import dev.gaphunter.formatconvertercompanion.review.ReviewPrompt
 
 /**
  * Converts the current selection (or, with no selection, the whole
@@ -57,6 +58,8 @@ abstract class ConvertAction(private val target: Format) : AnAction() {
                 WriteCommandAction.runWriteCommandAction(project, "Convert to ${target.label}", null, {
                     document.replaceString(rangeStart, rangeEnd, convertedText)
                 })
+                // Real successful conversion only -- never the error branch above.
+                ReviewPrompt.recordHit(project)
             }
         }
     }
