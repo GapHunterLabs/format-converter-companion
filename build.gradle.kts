@@ -50,4 +50,20 @@ intellijPlatform {
             VerifyPluginTask.FailureLevel.SCHEDULED_FOR_REMOVAL_API_USAGES,
         )
     }
+
+    // publishPlugin credentials -- token/cert/key read from
+    // ~/.gradle/gradle.properties (self-signed cert generated once for
+    // the whole catalog, 10-year validity) -- never in this file. Without
+    // this block, `./gradlew publishPlugin` has no credentials to publish
+    // with -- found missing (and manually patched) on several plugins
+    // before being added here so this scaffold has it too.
+    publishing {
+        token.set(providers.gradleProperty("gapHunterLabs.marketplace.token"))
+    }
+
+    signing {
+        certificateChain.set(providers.gradleProperty("gapHunterLabs.marketplace.certificateChain"))
+        privateKey.set(providers.gradleProperty("gapHunterLabs.marketplace.privateKey"))
+        password.set(providers.gradleProperty("gapHunterLabs.marketplace.privateKeyPassword"))
+    }
 }
