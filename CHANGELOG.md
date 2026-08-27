@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+## [0.1.2]
+
+### Added
+
+- Review/star CTA: after 5 successful conversions, a one-time
+  notification asks whether to rate the plugin on Marketplace, with a
+  permanent "Don't ask again" option.
+
 ## [0.1.1]
 
 ### Added
@@ -32,6 +40,7 @@
 - Source format detection by content, not file extension.
 - Conversion runs off the EDT so large documents don't freeze the IDE.
 
-[Unreleased]: https://github.com/GapHunterLabs/format-converter-companion/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/GapHunterLabs/format-converter-companion/compare/0.1.2...HEAD
+[0.1.2]: https://github.com/GapHunterLabs/format-converter-companion/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/GapHunterLabs/format-converter-companion/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/GapHunterLabs/format-converter-companion/commits/0.1.0
