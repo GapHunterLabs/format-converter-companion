@@ -16,7 +16,7 @@ dependencies {
         // Add bundledPlugin(...) lines here only for what this plugin
         // actually depends on (e.g. "com.intellij.java",
         // "org.jetbrains.kotlin", "org.jetbrains.plugins.yaml") --
-        // see AUTOMATION_PLAYBOOK.md SS1 for the confirmed pattern.
+        // this is the confirmed pattern for this dependency shape.
 
         testFramework(TestFrameworkType.Platform)
     }
@@ -40,7 +40,7 @@ intellijPlatform {
 
     // Catch experimental/internal API usage locally, before Marketplace's
     // own verifier flags it post-upload. Never relax this list without a
-    // documented exception (see AUTOMATION_PLAYBOOK.md SS1.5).
+    // documented exception.
     pluginVerification {
         failureLevel = listOf(
             VerifyPluginTask.FailureLevel.COMPATIBILITY_PROBLEMS,
