@@ -3,6 +3,14 @@
 Converts JSON, YAML, and XML directly in the editor -- select text (or
 convert the whole file) and pick a target format from the right-click menu.
 
+![Format Converter Companion: convert JSON, YAML and XML in place](docs/media/hero.gif)
+
+Each feature on its own:
+[JSON to YAML](docs/media/01-json-to-yaml.gif) ·
+[YAML to JSON](docs/media/02-yaml-to-json.gif)
+(the recording runs the actions from Find Action; they are the same entries as
+the right-click **Convert Format** menu)
+
 ## Why it exists
 
 **JSON-YAML-XML Converter** (JetBrains Marketplace id 20297), 10,062
