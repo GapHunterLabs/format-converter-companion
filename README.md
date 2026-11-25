@@ -14,8 +14,7 @@ the right-click **Convert Format** menu)
 ## Why it exists
 
 **JSON-YAML-XML Converter** (JetBrains Marketplace id 20297), 10,062
-downloads, paid, vendor Syncro Soft -- rated 2.9/5, the lowest of any
-competitor evaluated for this workspace. Real, verbatim reviewer
+downloads, paid, vendor Syncro Soft -- rated 2.9/5, the lowest of any competitor I evaluated for this plugin. Real, verbatim reviewer
 complaints:
 
 - *"Not usable with IntelliJ 2024.2.1 (Ultimate Edition)"* / *"Not usable
@@ -37,8 +36,7 @@ complaints:
   document text), never raw bytes with an assumed encoding.
 - **Hand-rolled JSON and YAML parsers**, not a bundled Jackson/SnakeYAML
   dependency: relying on an IntelliJ Platform-internal library that isn't
-  a declared plugin dependency is exactly the kind of classpath fragility
-  this workspace already steers away from (same call made for
+  a declared plugin dependency is exactly the kind of classpath fragility my plugins already steer away from (same call made for
   `XlsxReader`/`NginxDirectiveIndex` in other plugins here). XML uses the
   JDK's own `javax.xml` DOM APIs (the actual standard library, not an
   added dependency), hardened against XXE.
